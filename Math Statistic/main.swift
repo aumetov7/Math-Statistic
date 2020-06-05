@@ -70,7 +70,7 @@ for _ in 0..<numberOfInterval {
         
         length += 1
     }
-
+    
     intervalArray.append(Interval(leftBorder: minDigit, rightBorder: minDigit + h, array: bordersOfIntervals))
     
     minDigit += h
@@ -156,27 +156,27 @@ for interval in intervalArray {
     gaussFunction = (1 / (sqrt(2 * .pi))) * pow(M_E, -(pow(u, 2) / 2))
     interval.teoreticRate = ((Double(sampleArray.count) * h) / standartDeviation!) * gaussFunction
 }
- 
- // MARK: - Add borders
+
+// MARK: - Add borders
 
 var i = 0
 
 while i < intervalArray.count - 1 {
     if intervalArray[i].array!.count < 6 && intervalArray[i + 1].array!.count < 6 {
         var someArray = Array<Double>()
-
+        
         someArray.append(contentsOf: intervalArray[i].array!)
         someArray.append(contentsOf: intervalArray[i + 1].array!)
-
+        
         let interval = Interval(leftBorder: intervalArray[i].leftBorder!, rightBorder: intervalArray[i + 1].rightBorder!, array: someArray)
         interval.teoreticRate = intervalArray[i].teoreticRate! + intervalArray[i + 1].teoreticRate!
         
         intervalArray.remove(at: i)
         intervalArray[i] = interval
-
+        
         i -= 1
     }
-
+    
     i += 1
 }
 
