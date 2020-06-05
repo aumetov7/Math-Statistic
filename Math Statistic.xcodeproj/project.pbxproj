@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D825BF562487E7E100CD3853 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D825BF552487E7E100CD3853 /* main.swift */; };
+		D825BF5E2487E80400CD3853 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = D825BF5D2487E80400CD3853 /* CSV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D825BF5E2487E80400CD3853 /* CSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,9 @@
 			dependencies = (
 			);
 			name = "Math Statistic";
+			packageProductDependencies = (
+				D825BF5D2487E80400CD3853 /* CSV */,
+			);
 			productName = "Math Statistic";
 			productReference = D825BF522487E7E100CD3853 /* Math Statistic */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +111,9 @@
 				Base,
 			);
 			mainGroup = D825BF492487E7E100CD3853;
+			packageReferences = (
+				D825BF5C2487E80400CD3853 /* XCRemoteSwiftPackageReference "CSV.swift" */,
+			);
 			productRefGroup = D825BF532487E7E100CD3853 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +292,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D825BF5C2487E80400CD3853 /* XCRemoteSwiftPackageReference "CSV.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaslab/CSV.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D825BF5D2487E80400CD3853 /* CSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D825BF5C2487E80400CD3853 /* XCRemoteSwiftPackageReference "CSV.swift" */;
+			productName = CSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D825BF4A2487E7E100CD3853 /* Project object */;
 }
